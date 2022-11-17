@@ -49,7 +49,7 @@
                                 <ul>
                                     <li class="liContainer" v-for="contact in contacts">
                                         <div class="chatImage">
-                                            <img :src="'img' + '/' + 'avatar' + contacts[currentAvatar].avatar + '.jpg'" alt="#">
+                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
                                         </div>
                                         <div class="chatName">
                                             <span>{{ contact.name }}</span>
