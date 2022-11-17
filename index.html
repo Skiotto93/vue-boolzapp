@@ -44,6 +44,24 @@
                             </button>
                             <input class="research" type="text" placeholder="Cerca o inizia una nuova chat">
                         </div>
+                        <div class="menuChat">
+                            <nav>
+                                <ul>
+                                    <li class="liContainer" v-for="contact in contacts">
+                                        <div class="chatImage">
+                                            <img :src="'img' + '/' + 'avatar' + contacts[currentAvatar].avatar + '.jpg'" alt="#">
+                                        </div>
+                                        <div class="chatName">
+                                            <span>{{ contact.name }}</span>
+                                            <p>Ultimo messaggio inviato</p>
+                                        </div>
+                                        <div class="chatDate">
+                                            <span>12:00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </main>
                 </div>
                 <div class="containerRight">
@@ -72,7 +90,6 @@
                             <button class="btnSend">
                                 <i class="fa-solid fa-share"></i>
                             </button>
-                            
                         </div>
                     </footer>
                 </div>

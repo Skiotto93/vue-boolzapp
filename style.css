@@ -134,3 +134,35 @@
     border-radius: 50%;
     color: grey;
 }
+.menuChat {
+    overflow-y: auto;
+    background-color: white;
+}
+.chatImage {
+    height: 50px;
+    width: 10%;
+}
+.chatName {
+    width: 60%;
+}
+.chatImage img {
+    width: 50px;
+    border-radius: 50%;
+}
+.liContainer {
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+}
+.chatName span {
+    font-weight: bold;
+}
+.chatName p {
+    font-size: 14px;
+    color: grey;
+}
+.chatDate {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
