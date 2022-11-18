@@ -180,7 +180,7 @@ createApp({
                 message: this.newMessege,
                 status: 'sent'
             };
-            this.contact.messages.push(objNewMessage);
+            this.contacts[this.currentAvatar].messages.push(objNewMessage);
             this.newMessege = '';
         }
   }
