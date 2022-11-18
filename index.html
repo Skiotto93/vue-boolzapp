@@ -86,18 +86,16 @@
                             <span class="time">12:00</span>  
                         </div>
                     </main>
-                    <footer class="searchFooter">
-                        <div class="emoticons">
-                            <i class="fa-regular fa-face-smile"></i>
-                        </div>
-                        <div class="write">
-                            <input type="text" placeholder="Scrivi un messaggio">
-                        </div>
-                        <div class="send">
-                            <button class="btnSend">
-                                <i class="fa-solid fa-share"></i>
-                            </button>
-                        </div>
+                    <footer>
+                        <form @submit.prevent="addNewMessage">
+                            <div class="searchFooter">
+                                <i class="fa-regular fa-face-smile emoticons"></i>
+                                <input class="write" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" required>
+                                <button type="submit" class="send btnSend">
+                                    <i class="fa-solid fa-share"></i>
+                                </button>
+                            </div>
+                        </form>
                     </footer>
                 </div>
             </div>

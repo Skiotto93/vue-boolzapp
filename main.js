@@ -4,6 +4,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newMessage: '',
             currentAvatar : 0,
             contacts: [
                 {
@@ -173,6 +174,14 @@ createApp({
     methods: {
         changeChat(i) {
             this.currentAvatar = i;
+        },
+        addNewMessage() {
+            const objNewMessage = {
+                message: this.newMessege,
+                status: 'sent'
+            };
+            this.contact.messages.push(objNewMessage);
+            this.newMessege = '';
         }
   }
 }).mount('#app')
