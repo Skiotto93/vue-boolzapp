@@ -68,14 +68,22 @@
 }
 .notice {
     display: flex;
+    align-items: center;
     background-color: #8edafc;
     padding: 10px;
 }
-.fa-bell-slash {
-    font-size: 30px;
+.bell {
     background-color: white;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid lightgray;
     border-radius: 50%;
     color: #8edafc;
+}
+.fa-bell-slash {
+    font-size: 20px;
 }
 .textNotice {
     padding-left: 10px;
@@ -107,6 +115,8 @@
 .mainBackground {
     background-image: url(img/mine.jpg);
     flex-grow: 1;
+    flex-shrink: initial;
+    padding: 30px 70px;
 }
 .searchFooter {
     align-items: center;
@@ -116,14 +126,16 @@
     color: grey;
     text-align: center;
 }
-.chat {
+.write {
     width: 80%;
     height: 30px;
 }
-.chat input {
+.write input {
     width: 100%;
     height: 100%;
     padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
 }
 .btnSend {
     background-color: white;
@@ -154,6 +166,9 @@
     width: 100%;
     padding: 10px 20px;
 }
+.liContainer.active {
+    background-color: #e9ebeb;
+}
 .chatName span {
     font-weight: bold;
 }
@@ -165,4 +180,32 @@
     flex-grow: 1;
     display: flex;
     justify-content: end;
+}
+/*-----------------
+    MESSAGES
+-----------------*/
+.sent {
+    background-color: #d5f9ba;
+    margin: 5px 0;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 18.75rem;
+    margin-left: 60%;
+}
+.received {
+    background-color: white;
+    margin: 5px 0;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 18.75rem;
+}
+.time {
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 5px;
+    color: #b1b1b1;
 }

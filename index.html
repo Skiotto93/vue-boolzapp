@@ -47,9 +47,13 @@
                         <div class="menuChat">
                             <nav>
                                 <ul>
-                                    <li class="liContainer" v-for="contact in contacts">
+                                    <li 
+                                        class="liContainer" v-for="(contact, index) in contacts"
+                                        :class="{active: index === currentAvatar}"
+                                        @click="changeChat(index)"
+                                    >
                                         <div class="chatImage">
-                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
+                                            <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                         </div>
                                         <div class="chatName">
                                             <span>{{ contact.name }}</span>
@@ -77,13 +81,16 @@
                         </div>
                     </header>
                     <main class="mainBackground">
-                        
+                        <div v-for="message in contacts[currentAvatar].messages" :class="message.status">                            
+                            <p>{{ message.message }}</p>
+                            <span class="time">12:00</span>  
+                        </div>
                     </main>
                     <footer class="searchFooter">
                         <div class="emoticons">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
-                        <div class="chat">
+                        <div class="write">
                             <input type="text" placeholder="Scrivi un messaggio">
                         </div>
                         <div class="send">

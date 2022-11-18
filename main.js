@@ -171,6 +171,8 @@ createApp({
         }
     },
     methods: {
-       
+        changeChat(i) {
+            this.currentAvatar = i;
+        }
   }
 }).mount('#app')
