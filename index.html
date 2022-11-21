@@ -42,7 +42,9 @@
                             <button class="btn">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input class="research" type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input class="research" type="text" 
+                            placeholder="Cerca o inizia una nuova chat"
+                            v-model="research">
                         </div>
                         <div class="menuChat">
                             <nav>
@@ -71,8 +73,8 @@
                 <div class="containerRight">
                     <header class="headerContainer">
                         <div class="myAccount">
-                            <img class="avatar" src="img/avatar_3.jpg" alt="#">
-                            <strong>Michele</strong>
+                            <img class="avatar" :src="`img/avatar + contact[index].avatar + .jpg`" alt="#">
+                            <span></span>
                         </div>
                         <div class="options">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -90,7 +92,7 @@
                         <form @submit.prevent="addNewMessage">
                             <div class="searchFooter">
                                 <i class="fa-regular fa-face-smile emoticons"></i>
-                                <input class="write" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" required>
+                                <input class="write" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" minlength="1" required>
                                 <button type="submit" class="send btnSend">
                                     <i class="fa-solid fa-share"></i>
                                 </button>

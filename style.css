@@ -117,6 +117,7 @@
     flex-grow: 1;
     flex-shrink: initial;
     padding: 30px 70px;
+    overflow-y: auto;
 }
 .searchFooter {
     align-items: center;

@@ -1,9 +1,11 @@
 "use strict";
+
 const { createApp } = Vue
 
 createApp({
     data() {
         return {
+            research:'',
             newMessage: '',
             currentAvatar : 0,
             contacts: [
@@ -177,11 +179,23 @@ createApp({
         },
         addNewMessage() {
             const objNewMessage = {
-                message: this.newMessege,
+                message: this.newMessage,
                 status: 'sent'
             };
             this.contacts[this.currentAvatar].messages.push(objNewMessage);
-            this.newMessege = '';
+            this.newMessage = '';
+            setTimeout(function() {
+                const objResponse = {
+                    date: '15/01/2020 22:13:00',
+                    message: 'ok',
+                    status: 'received'
+                };
+                this.contacts.messages.push(objResponse);
+                console.log(objResponse)
+            }, 1000)
         }
-  }
+    },
+    computed: {
+
+    }
 }).mount('#app')
