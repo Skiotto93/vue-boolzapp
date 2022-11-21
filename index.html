@@ -62,7 +62,7 @@
                                             <p>Ultimo messaggio inviato</p>
                                         </div>
                                         <div class="chatDate">
-                                            <span>12:00</span>
+                                            <span>{{ contact.messages.date }}</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -85,7 +85,7 @@
                     <main class="mainBackground">
                         <div v-for="message in contacts[currentAvatar].messages" :class="message.status">                            
                             <p>{{ message.message }}</p>
-                            <span class="time">12:00</span>  
+                            <span class="time">{{ message.date }}</span>  
                         </div>
                     </main>
                     <footer>
