@@ -72,8 +72,8 @@
                 </div>
                 <div class="containerRight">
                     <header class="headerContainer">
-                        <div class="myAccount">
-                            <img class="avatar" :src="`img/avatar + contact[index].avatar + .jpg`" alt="#">
+                        <div class="myAccount" v-for="(contact, index) in contacts">
+                            <img class="avatar" :src="'img/avatar' + contact.avatar[index] + '.jpg'" alt="#">
                             <span></span>
                         </div>
                         <div class="options">

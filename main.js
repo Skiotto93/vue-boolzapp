@@ -179,23 +179,27 @@ createApp({
         },
         addNewMessage() {
             const objNewMessage = {
+                date: new Date().toLocaleDateString(),
                 message: this.newMessage,
                 status: 'sent'
             };
             this.contacts[this.currentAvatar].messages.push(objNewMessage);
             this.newMessage = '';
-            setTimeout(function() {
+            setTimeout(() => {
                 const objResponse = {
-                    date: '15/01/2020 22:13:00',
+                    date: new Date().toLocaleDateString(),
                     message: 'ok',
                     status: 'received'
                 };
-                this.contacts.messages.push(objResponse);
-                console.log(objResponse)
+                this.contacts[this.currentAvatar].messages.push(objResponse);
             }, 1000)
         }
     },
     computed: {
-
+        filteredContants: function() {
+            return this.contacts.filter((contact) => {
+                return contact.name.match(this.research)
+            })
+        }
     }
 }).mount('#app')
