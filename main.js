@@ -196,9 +196,9 @@ createApp({
         }
     },
     computed: {
-        filteredContants() {
+        filteredContacts() {
             if(this.research.trim().length > 0) {
-                return this.contacts.filter((contact) => contact.name.toLowerCase().includes(this.research.trim()))
+                return this.contacts.filter((contact) => contact.name.toLowerCase().includes(this.research.trim().toLowerCase()))
             }
             return this.contacts
         }

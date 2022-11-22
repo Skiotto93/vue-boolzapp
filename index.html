@@ -50,9 +50,10 @@
                             <nav>
                                 <ul>
                                     <li 
-                                        class="liContainer" v-for="(contact, index) in filteredContants"
+                                        class="liContainer" v-for="(contact, index) in filteredContacts"
                                         :class="{active: index === currentAvatar}"
                                         @click="changeChat(index)"
+                                        v-if="filteredContacts.length"
                                     >
                                         <div class="chatImage">
                                             <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
@@ -64,6 +65,9 @@
                                         <div class="chatDate">
                                             <span>{{ contact.messages.date }}</span>
                                         </div>
+                                    </li>
+                                    <li v-else class="contactNotFound">
+                                        <span><strong>No Contact found</strong></span>
                                     </li>
                                 </ul>
                             </nav>

@@ -208,3 +208,9 @@
     right: 5px;
     color: #b1b1b1;
 }
+.contactNotFound {
+    text-align: center;
+    background-color: #e9ebeb;
+    list-style: none;
+    padding-top: 50px;
+}
