@@ -193,7 +193,7 @@ createApp({
                 };
                 this.contacts[this.currentAvatar].messages.push(objResponse);
             }, 1000)
-        }
+        },
     },
     computed: {
         filteredContacts() {

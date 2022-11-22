@@ -59,7 +59,7 @@
                                             <img :src="'img/avatar' + contact.avatar + '.jpg'" :alt="contact.name">
                                         </div>
                                         <div class="chatName">
-                                            <span>{{ contact.name }}</span>
+                                            <span><strong>{{ contact.name }}</strong></span>
                                             <p>Ultimo messaggio inviato</p>
                                         </div>
                                         <div class="chatDate">
@@ -78,7 +78,7 @@
                     <header class="headerContainer">
                         <div class="myAccount" v-for="(contact, index) in contacts">
                             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
-                            <span>{{ contact.name }}</span>
+                            <span><strong>{{ contact.name }}</strong></span>
                         </div>
                         <div class="options">
                             <i class="fa-solid fa-magnifying-glass"></i>
