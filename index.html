@@ -76,7 +76,7 @@
                 </div>
                 <div class="containerRight">
                     <header class="headerContainer">
-                        <div class="myAccount" v-for="(contact, index) in contacts">
+                        <div class="myAccount" v-for="(contact, index) in contacts" v-show=" index == currentAvatar">
                             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="#">
                             <span><strong>{{ contact.name }}</strong></span>
                         </div>
