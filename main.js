@@ -196,10 +196,11 @@ createApp({
         }
     },
     computed: {
-        filteredContants: function() {
-            return this.contacts.filter((contact) => {
-                return contact.name.match(this.research)
-            })
+        filteredContants() {
+            if(this.research.trim().length > 0) {
+                return this.contacts.filter((contact) => contact.name.toLowerCase().includes(this.research.trim()))
+            }
+            return this.contacts
         }
     }
 }).mount('#app')
